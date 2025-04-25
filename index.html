@@ -9,71 +9,100 @@
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
     }
-    header, nav, section, footer {
-      max-width: 800px;
-      margin: auto;
+    /* 横幅 */
+    .banner {
+      width: 100%;
+      height: 25vh;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 主体双栏布局 */
+    .main {
+      display: flex;
+      min-height: 75vh;
+    }
+
+    /* 左侧栏 */
+    .sidebar {
+      width: 20%;
+      background-color: #2c3e50;
+      color: white;
       padding: 20px;
+      box-sizing: border-box;
     }
-    nav {
-      background-color: #333;
-      text-align: center;
+    .sidebar h2 {
+      font-size: 18px;
+      margin-top: 0;
     }
-    nav a {
+    .sidebar a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      display: block;
+      margin: 10px 0;
     }
-    h1, h2 {
+
+    /* 右侧内容区 */
+    .content {
+      width: 80%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .content h2 {
       color: #2c3e50;
     }
+
     footer {
       text-align: center;
       color: #777;
-      padding: 10px;
+      padding: 20px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- 顶部横幅图像 -->
-<div style="width: 100%; height: 30vh; overflow: hidden;">
-  <img src="hero.jpg" alt="Banner Image" style="width: 100%; height: 100%; object-fit: cover;">
-</div>  
+<!-- 横幅图像 -->
+<div class="banner">
+  <img src="banner.jpg" alt="Banner Image">
+</div>
 
-<header>
-  <h1>你好，我是 Azhihong 👋</h1>
-  <p>欢迎访问我的学术主页！</p>
-</header>
+<!-- 主体部分：双栏布局 -->
+<div class="main">
+  <div class="sidebar">
+    <h2>导航</h2>
+    <a href="#about">关于我</a>
+    <a href="#publications">发表论文</a>
+    <a href="#contact">联系我</a>
+  </div>
 
-<nav>
-  <a href="#about">关于我</a>
-  <a href="#publications">发表论文</a>
-  <a href="#contact">联系我</a>
-</nav>
+  <div class="content">
+    <section id="about">
+      <h2>关于我</h2>
+      <p>我是一名人工智能方向的博士生，研究方向包括计算机视觉、多模态学习等。目前就读于 XX 大学。</p>
+    </section>
 
-<section id="about">
-  <h2>关于我</h2>
-  <p>我是一名人工智能方向的博士生，研究方向包括计算机视觉、多模态学习等。目前就读于 XX 大学。</p>
-</section>
+    <section id="publications">
+      <h2>发表论文</h2>
+      <ul>
+        <li>Azhihong, et al. <i>"MambaSOD: RGB-guided Pseudo Depth Generation for Salient Object Detection"</i>, CVPR 2024.</li>
+        <li>Azhihong, et al. <i>"Cross-Modal Fusion with Lightweight Transformers"</i>, NeurIPS 2023.</li>
+      </ul>
+    </section>
 
-<section id="publications">
-  <h2>发表论文</h2>
-  <ul>
-    <li>Azhihong, et al. <i>"MambaSOD: RGB-guided Pseudo Depth Generation for Salient Object Detection"</i>, CVPR 2024.</li>
-    <li>Azhihong, et al. <i>"Cross-Modal Fusion with Lightweight Transformers"</i>, NeurIPS 2023.</li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>联系我</h2>
-  <p>📧 邮箱：azhihong@example.com</p>
-  <p>🏫 单位：广东技术师范大学 · 交叉学科研究院</p>
-  <p>🌐 <a href="https://github.com/azhihong">我的GitHub</a></p>
-</section>
+    <section id="contact">
+      <h2>联系我</h2>
+      <p>📧 邮箱：azhihong@example.com</p>
+      <p>🏫 单位：XX大学 · 计算机科学与技术系</p>
+      <p>🌐 <a href="https://github.com/azhihong" target="_blank">我的GitHub</a></p>
+    </section>
+  </div>
+</div>
 
 <footer>
   <p>© 2025 Azhihong. 版权所有.</p>
