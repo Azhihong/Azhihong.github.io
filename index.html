@@ -1,52 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcom to my academic homepage</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>欢迎来到我的主页</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 横幅样式 */
+    .banner {
+      width: 100%;
+      height: 25vh; /* 页面高度的1/4 */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 保持比例裁剪填满容器 */
+      transition: transform 0.5s ease;
+    }
+
+    .banner img:hover {
+      transform: scale(1.05); /* hover时略微放大 */
+    }
+
+    /* 主体部分：双栏布局 */
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+
+    .left-column {
+      flex: 1; /* 占五分之一 */
+      padding-right: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .right-column {
+      flex: 4; /* 占五分之四 */
+    }
+  </style>
 </head>
-
 <body>
-<div class="banner">
-    <img src="Images/Banner.jpg" alt="Banner" class="banner-image">
+
+  <!-- 横幅图像 -->
+  <div class="banner">
+    <img src="Images/banner.jpg" alt="Banner Image">
   </div>
 
-<!-- 主体部分：双栏布局 -->
-<div class="main">
-  <div class="sidebar">
-      <!-- 头像和名字 -->
-      <img src="Images/avatar.jpg" alt="Avatar" class="avatar">
-      <p class="name">Azhihong</p>
-      <!-- 其他侧边栏内容可以放在这里 -->
-  </div>
-
-  <div class="content">
-    <section id="about">
-      <h2>关于我</h2>
-      <p>我是一名人工智能方向的博士生，研究方向包括计算机视觉、多模态学习等。目前就读于 XX 大学。</p>
-    </section>
-
-    <section id="publications">
-      <h2>发表论文</h2>
+  <!-- 主体内容区域 -->
+  <div class="main">
+    <div class="left-column">
+      <h3>导航</h3>
       <ul>
-        <li>Azhihong, et al. <i>"MambaSOD: RGB-guided Pseudo Depth Generation for Salient Object Detection"</i>, CVPR 2024.</li>
-        <li>Azhihong, et al. <i>"Cross-Modal Fusion with Lightweight Transformers"</i>, NeurIPS 2023.</li>
+        <li><a href="#">关于我</a></li>
+        <li><a href="#">项目</a></li>
+        <li><a href="#">联系方式</a></li>
       </ul>
-    </section>
-
-    <section id="contact">
-      <h2>联系我</h2>
-      <p>📧 邮箱：azhihong@example.com</p>
-      <p>🏫 单位：广东技术师范大学 · 交叉学科研究院</p>
-      <p>🌐 <a href="https://github.com/azhihong" target="_blank">我的GitHub</a></p>
-    </section>
+    </div>
+    <div class="right-column">
+      <h1>你好，我是 Azhihong 👋</h1>
+      <p>欢迎访问我的个人网站！</p>
+    </div>
   </div>
-</div>
-
-<footer>
-  <p>© 2025 Azhihong. 版权所有.</p>
-</footer>
 
 </body>
 </html>
