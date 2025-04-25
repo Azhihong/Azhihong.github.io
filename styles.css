@@ -1,0 +1,38 @@
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .navbar-right .email {
+    text-decoration: none;
+    font-size: 16px;
+    color: #0077cc;
+  }
+
+  .navbar-right .email:hover {
+    text-decoration: underline;
+  }
+</style>
