@@ -23,33 +23,6 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.navbar-left {
-  display: flex;
-  align-items: center;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.name {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.navbar-right .email {
-  color: #0366d6;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.navbar-right .email:hover {
-  text-decoration: underline;
-}
-
 /* 主体双栏布局 */
 .main-container {
   display: flex;
@@ -62,6 +35,20 @@ body {
   min-width: 180px;
   max-width: 20%;
   padding-right: 30px;
+}
+
+.sidebar .avatar {
+  width: 80%; /* 设置头像宽度 */
+  height: auto; /* 保持头像的宽高比 */
+  border-radius: 50%; /* 使头像圆形 */
+  margin: 20px auto; /* 居中显示并添加间距 */
+}
+
+.sidebar .name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .content {
