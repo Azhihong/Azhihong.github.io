@@ -1,16 +1,14 @@
 <!--
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <meta charset="utf-8">
   <title>欢迎来到我的主页</title>
 </head>
 <body>
   <h1>你好，我是Azhihong 👋</h1>
   <p>欢迎访问我的个人网站！</p>
-</body>
-</html>
--->
+</body></html>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -212,7 +210,14 @@ if (!doNotTrack) {
     
     <script id="dsq-count-scr" src="//joshuahu-io.disqus.com/count.js" async></script>
     
-
-
   </body>
 </html>
+-->
+
+{{ partial "header.html" . }}
+{{ partial "masthead_hero.html" . }}
+
+{{ partial "homepage.html" . }}
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}
